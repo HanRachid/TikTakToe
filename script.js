@@ -111,8 +111,6 @@ const comprPlay = document.querySelector(".cell" + compPlay);
 const numberClick = document.querySelectorAll("#grid>div");
 const resetGame = document.querySelector(".reset");
 
-const test = document.querySelector(".test");
-
 // for (element in numberClickArray) {
 //   element.addEventListener("click", startGame(element));
 // }
@@ -220,10 +218,10 @@ for (const element of numberClick) {
         fillCell(-1);
 
         const comprPlay = document.querySelector(".cell" + computerCell);
-        if (!isOver) {
-          setTimeout(tictacClick, 300, comprPlay, false);
-          console.log(playedCells);
-        }
+
+        console.log("truuu");
+        setTimeout(tictacClick, 300, comprPlay, false);
+        console.log(playedCells);
       }
     }
   });
@@ -238,11 +236,3 @@ const reset = (element, pos) => {
 computerClick = () => {
   console.log("works");
 };
-
-test.addEventListener(
-  "click",
-  () => {
-    winScreen("try");
-  },
-  { once: true }
-);
